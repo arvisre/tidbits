@@ -21,7 +21,7 @@ drwxr-xr-x. 2 as as  4096 May 16 18:11 'Telegram Desktop' </br>
 
 ## 1 and 2 - The Documents directory itself will NOT be deleted — because I'm currently inside it, the OS keeps it open/in-use, so rm cannot remove the directory entry itself. </br>  
 
-### 3) as@asdfed:~/Downloads$ rm -r ./*  
+### 3)as@asdfed:~/Downloads$ rm -r ./*  
 as@asdfed:~/Downloads$ ls -l  
 total 0  
 as@asdfed:~/Downloads$ </br>    
