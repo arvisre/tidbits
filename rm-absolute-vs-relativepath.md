@@ -22,19 +22,19 @@ drwxr-xr-x. 2 as as  4096 May 16 18:11 'Telegram Desktop' </br>
 ## 1 and 2 - The Documents directory itself will NOT be deleted — because I'm currently inside it, the OS keeps it open/in-use, so rm cannot remove the directory entry itself. </br>  
 
 ### 3)as@asdfed:~/Downloads$ rm -r ./*  
-as@asdfed:~/Downloads$ ls -l  
+as@asdfed:\~/Downloads$ ls -l  
 total 0  
-as@asdfed:~/Downloads$ </br>    
+as@asdfed:\~/Downloads$ </br>    
 
-### 4)as@asdfed:~/Downloads$ ls -l  
+### 4)as@asdfed:\~/Downloads$ ls -l  
 total 4  
 -rw-r--r--. 1 as as    0 May 20 14:20  001.png  
 -rw-r--r--. 1 as as    0 May 20 14:20  002.png  
 drwxr-xr-x. 2 as as 4096 May 20 14:22 'Telegram Desktop' </br>  
-### as@asdfed:~/Downloads$ rm -r /home/as/Downloads  
-as@asdfed:~/Downloads$ ls -l  
+### as@asdfed:\~/Downloads$ rm -r /home/as/Downloads  
+as@asdfed:\~/Downloads$ ls -l  
 total 0  
-as@asdfed:~/Downloads$ cd ..  
+as@asdfed:\~/Downloads$ cd ..  
 as@asdfed:~$ ls -l  
 total 40  
 drwxr-xr-x.  2 as as 4096 May  6 21:55 Desktop  
