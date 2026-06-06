@@ -49,3 +49,6 @@ drwxr-xr-x.  2 as as 4096 May  6 21:55 Templates
 drwxr-xr-x.  2 as as 4096 May  6 21:55 Videos </br>  
 
 ## 4 - Linux allows me to delete a directory I'm currently inside by providing its absolute path as the argument.
+
+## I'm new to GitHub and Markdown file format. I just learned that a single tilde (representing the home directory) can be processed as a strike-through operator.  
+## I learned that to workaround this, I have to prefix the tile with a backslash character. Uffff.  
