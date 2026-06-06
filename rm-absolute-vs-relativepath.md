@@ -1,6 +1,6 @@
 ## Scenario: Let's say my current working directory is /home/as/Downloads. There is a sub-directory and files inside Downloads. </br>  
 
-## Action: I'm tryin to run the rm -r . command and expect it to delete both the Downloads directory and its sub-directory and files. </br>  
+## Action: I'm tryin to run the **"rm -r ."** command and expect it to delete both the Downloads directory and its sub-directory and files. </br>  
 
 ## Result:</br>  
 ### 1) as@asdfed:~/Downloads$ rm -r .
