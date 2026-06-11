@@ -5,8 +5,7 @@ By reading a few blog posts, I learned that I can run commands after applying so
 The command **sudo dnf needs-restarting -r** can provide information whether a restart is required. </br>  
 The results of running the command is shown in the images below: </br>  
 <img width="1240" height="539" alt="Screenshot From 2026-06-07 22-05-16" src="https://github.com/user-attachments/assets/4553d41e-76a3-4ef8-a8e1-200e8b852768" /> </br>  
-
-<img width="1232" height="445" alt="Screenshot From 2026-06-09 14-08-40" src="https://github.com/user-attachments/assets/7f271cdc-e764-4619-83ac-98171447de44" /> </br>  
+<img width="635" height="658" alt="Screenshot From 2026-06-11 15-36-13" src="https://github.com/user-attachments/assets/5b6d6331-cee5-4683-9c6b-7d565d49b98b" /> </br>  
 
 ## How can I perform this on Ubuntu Desktop? </br>  
 On a Ubuntu desktop, I installed the package "needrestart" to check if the Operating System needs a reboot. </br>  
