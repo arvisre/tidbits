@@ -27,3 +27,29 @@ The search for this answer lead to some important learning. </br>
   9. **SO THIS IS WHAT EXACTLY HAPPENS WHEN WE RUN A COMMAND** </br>
 This lead to another question. </br>
 
+## What does it mean by **bash** executes **wait(). What is bash waiting for? </br>  
+This question lead to another important learning. </br>  
+1. When I open a **terminal/terminal emulator** it actually executing the program **/usr/bin/bash**. </br>  
+2. Whenerver a program is executed there is a **process** that is running until the program is closed. </br>
+3. Every **process** has a **process ID (PID)**. </br>
+4. So whenever I open a **terminal window**, the **Shell (bash)** is running and expecting me to type something. </br>
+5. Say I typed the same command **find /home/as/Documents**, as explained earlier, **bash** created a **Child Process**, executes **wait()**, **Child Process** exits, and finally, **bash** prints a prompt. </br>
+   ### The sequence of these events is explained using the example below: </br>
+   root           1       0  1 18:10 ?        00:00:01 /sbin/init splash  
+   as          1690       1  3 18:11 ?        00:00:00 /usr/lib/systemd/systemd --user  
+   as          2658    1690  8 18:11 ?        00:00:00 /usr/libexec/gnome-terminal-server  
+   as          2665    2658  0 18:11 pts/0    00:00:00 bash  
+   as          2677    2665  0 18:12 pts/0    00:00:00 ps -ef </br>  
+Let's take a look at **line 3** - That is the process when I open the **terminal window**. The process ID **PID** is **2658**. </br>  
+When I opened the **terminal** it has executed **bash (/usr/bin/bash)** as a **Child Process** with process ID **PID** **2665** and becomes the parent of this **Child Process**. </br>  
+As displayed in **line 4** - **bash** - the **Child Process** has a parent process ID **PPID** of **2658**. </br>  
+Now I run the command **ps -ef** and the **Shell (bash)** creates a clone of itself, makes the clone its **Child Process** with process ID **PID** **2677** and goes to **wait()**. </br>  
+The **Child Process** is going to execute **/usr/bin/ps** and become the **ps** command, executing the ps command with the options **-ef**. </br>  
+Note that the **Child Process** now has the parent process ID **PPID** of **2665**. </br>  
+Once the **ps -ef** is executed, the **Child Process** prints the output to **stdout** and exits with **exit code 0**. </br>  
+The parent process **bash** which has been in **wait()** comes back, stores the **exit code 0** in **$?** and prints a new prompt. </br>
+Just because the **ps** command has finished running does **NOT** mean that the **Shell (bash)** is also done. </br>
+**Bash** is still running as a process and waits for the user's input. </br>
+
+The image below shows the tasks that were explained above: </br>  
+<img width="723" height="610" alt="image" src="https://github.com/user-attachments/assets/d1d0d28b-2354-439d-97cd-e1a1d56fb1a5" />  
