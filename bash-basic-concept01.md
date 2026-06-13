@@ -27,7 +27,7 @@ The search for this answer lead to some important learning. </br>
   9. **SO THIS IS WHAT EXACTLY HAPPENS WHEN WE RUN A COMMAND** </br>
 This lead to another question. </br>
 
-## What does it mean by **bash** executes **wait(). What is bash waiting for? </br>  
+## What does it mean by **bash** executes **wait()**. What is bash waiting for? </br>  
 This question lead to another important learning. </br>  
 1. When I open a **terminal/terminal emulator** it actually executing the program **/usr/bin/bash**. </br>  
 2. Whenerver a program is executed there is a **process** that is running until the program is closed. </br>
